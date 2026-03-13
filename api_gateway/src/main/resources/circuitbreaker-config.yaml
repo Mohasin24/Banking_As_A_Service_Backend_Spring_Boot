@@ -1,0 +1,60 @@
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      accountServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker
+      authenticationServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker
+      loanServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker
+      notificationServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker
+      paymentServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker
+      transactionServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker
+      userServiceCB: # Circuit breaker name
+          registerHealthIndicator: true
+          slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+          slidingWindowSize: 10            # Number of calls to consider in the window
+          minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+          permittedNumberOfCallsInHalfOpenState: 3
+          waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+          failureRateThreshold: 50         # % of failures to trip the breaker

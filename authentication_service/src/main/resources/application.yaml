@@ -1,0 +1,56 @@
+server:
+  port: 0
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},traceId=%X{traceId},spanId=%X{spanId}]"
+
+jwt:
+  secret: d3171c6bc56bda5b29e3c242946f0a92b6ac012023f0e9bbfd9cf87012795a167676a1e8faa7722c1beeb77a152be6620d4c424ee6d2789c1e00568b1ad859b7a2775c00a0d55093684cda1fcb5c51b8e05abe051bf51e1501ddec18c4b34165875b0d02d1e6acae0777beeb9950125ac5b8398e6286a607da3af77847834ca1ff55fe025f828eff5fd089a27ee7fc861b81d4048fdc52705212ed1e32443956a1946456458a8463f7014e6a06fe7dcad6326f5fc5a888d656fd120ba82c384bbd30cc32d7e3e8de8f6f11cc797bca25e9005a824d696c228e1adae221d5cc2fc157f249ea92d8c90700386ebe3de196908a1c435ae098cb4cf88aeaa3baea0a
+
+spring:
+  application:
+    name: authentication-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    url: jdbc:mysql://localhost:3306/BAAS_Authentication_Service?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  # kafka config
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      group-id: authentication-kafkaService
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+
+#spring:
+#  config:
+#    import:
+#      - optional: auth-common.yaml

@@ -1,0 +1,107 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.account_service:account_service:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.kafka:spring-kafka:jar -> duplicate declaration of version (?) @ line 76, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------< com.loan_service:loan_service >--------------------
+[INFO] Building loan_service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.5:run (default-cli) > test-compile @ loan_service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ loan_service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ loan_service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ loan_service ---
+[INFO] skip non existing resourceDirectory U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\loan_service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ loan_service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.5:run (default-cli) < test-compile @ loan_service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.5:run (default-cli) @ loan_service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-01-20T14:43:05.839+05:30  INFO 5748 --- [loan-service] [  restartedMain] c.loan_service.LoanServiceApplication    : Starting LoanServiceApplication using Java 17.0.10 with PID 5748 (U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\loan_service\target\classes started by Mohasin in U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\loan_service)
+2026-01-20T14:43:05.844+05:30  INFO 5748 --- [loan-service] [  restartedMain] c.loan_service.LoanServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-20T14:43:05.911+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-20T14:43:05.912+05:30  WARN 5748 --- [loan-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@26a19762 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2026-01-20T14:43:05.912+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-20T14:43:05.912+05:30  WARN 5748 --- [loan-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@37be50bf uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2026-01-20T14:43:05.912+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-20T14:43:05.912+05:30  WARN 5748 --- [loan-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@19302b2 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2026-01-20T14:43:05.916+05:30  INFO 5748 --- [loan-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-20T14:43:05.916+05:30  INFO 5748 --- [loan-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-20T14:43:07.322+05:30  INFO 5748 --- [loan-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20T14:43:07.687+05:30  INFO 5748 --- [loan-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 344 ms. Found 1 JPA repository interface.
+2026-01-20T14:43:08.243+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f62d1d21-02b8-30b1-89d2-77d77c84082e
+2026-01-20T14:43:09.206+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-01-20T14:43:09.224+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-20T14:43:09.226+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-20T14:43:09.309+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-20T14:43:09.309+05:30  INFO 5748 --- [loan-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3393 ms
+2026-01-20T14:43:09.590+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20T14:43:09.685+05:30  INFO 5748 --- [loan-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-01-20T14:43:09.745+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-20T14:43:10.168+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20T14:43:10.219+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-20T14:43:10.652+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45ebd83b
+2026-01-20T14:43:10.656+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-20T14:43:10.728+05:30  WARN 5748 --- [loan-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-20T14:43:10.747+05:30  INFO 5748 --- [loan-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.35
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20T14:43:11.674+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20T14:43:11.748+05:30  INFO 5748 --- [loan-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20T14:43:12.069+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-20T14:43:12.971+05:30  WARN 5748 --- [loan-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20T14:43:13.545+05:30  WARN 5748 --- [loan-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-20T14:43:13.779+05:30  INFO 5748 --- [loan-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-01-20T14:43:13.828+05:30  WARN 5748 --- [loan-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-01-20T14:43:13.864+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 55757 (http) with context path '/'
+2026-01-20T14:43:13.867+05:30  INFO 5748 --- [loan-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 55757
+2026-01-20T14:43:13.873+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-01-20T14:43:13.893+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-01-20T14:43:13.898+05:30  INFO 5748 --- [loan-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-01-20T14:43:13.904+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-01-20T14:43:14.105+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-01-20T14:43:14.105+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-01-20T14:43:14.105+05:30  INFO 5748 --- [loan-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-01-20T14:43:14.121+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1768900394121 with initial instances count: 2
+2026-01-20T14:43:14.125+05:30  INFO 5748 --- [loan-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LOAN-SERVICE with eureka with status UP
+2026-01-20T14:43:14.125+05:30  INFO 5748 --- [loan-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1768900394125, current=UP, previous=STARTING]
+2026-01-20T14:43:14.126+05:30  INFO 5748 --- [loan-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOAN-SERVICE/Mohasin:loan-service:0: registering service...
+2026-01-20T14:43:14.176+05:30  INFO 5748 --- [loan-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOAN-SERVICE/Mohasin:loan-service:0 - registration status: 204
+2026-01-20T14:43:14.233+05:30  INFO 5748 --- [loan-service] [  restartedMain] c.loan_service.LoanServiceApplication    : Started LoanServiceApplication in 29.805 seconds (process running for 32.601)

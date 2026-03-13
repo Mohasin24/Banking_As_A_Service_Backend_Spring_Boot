@@ -1,0 +1,107 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.account_service:account_service:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.kafka:spring-kafka:jar -> duplicate declaration of version (?) @ line 76, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------< com.account_service:account_service >-----------------
+[INFO] Building account_service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.5:run (default-cli) > test-compile @ account_service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ account_service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ account_service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ account_service ---
+[INFO] skip non existing resourceDirectory U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\account_service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ account_service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.5:run (default-cli) < test-compile @ account_service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.5:run (default-cli) @ account_service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-01-20T14:42:51.137+05:30  INFO 19704 --- [account-service] [  restartedMain] c.a.AccountServiceApplication            : Starting AccountServiceApplication using Java 17.0.10 with PID 19704 (U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\account_service\target\classes started by Mohasin in U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\account_service)
+2026-01-20T14:42:51.141+05:30  INFO 19704 --- [account-service] [  restartedMain] c.a.AccountServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-01-20T14:42:51.233+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-20T14:42:51.233+05:30  WARN 19704 --- [account-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@223543ed uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2026-01-20T14:42:51.233+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-20T14:42:51.233+05:30  WARN 19704 --- [account-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5ca484c2 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2026-01-20T14:42:51.233+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-20T14:42:51.233+05:30  WARN 19704 --- [account-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@12bea82c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2026-01-20T14:42:51.237+05:30  INFO 19704 --- [account-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-20T14:42:51.237+05:30  INFO 19704 --- [account-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-20T14:42:53.378+05:30  INFO 19704 --- [account-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20T14:42:53.727+05:30  INFO 19704 --- [account-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 330 ms. Found 1 JPA repository interface.
+2026-01-20T14:42:54.540+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0921e8c4-7eaf-3848-a8ab-1a825eed7a5d
+2026-01-20T14:42:56.497+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-01-20T14:42:56.516+05:30  INFO 19704 --- [account-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-20T14:42:56.516+05:30  INFO 19704 --- [account-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-20T14:42:56.608+05:30  INFO 19704 --- [account-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-20T14:42:56.610+05:30  INFO 19704 --- [account-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5373 ms
+2026-01-20T14:42:56.908+05:30  INFO 19704 --- [account-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20T14:42:57.043+05:30  INFO 19704 --- [account-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-01-20T14:42:57.109+05:30  INFO 19704 --- [account-service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-20T14:42:57.530+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20T14:42:57.565+05:30  INFO 19704 --- [account-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-20T14:42:58.072+05:30  INFO 19704 --- [account-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61901129
+2026-01-20T14:42:58.073+05:30  INFO 19704 --- [account-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-20T14:42:58.168+05:30  WARN 19704 --- [account-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-20T14:42:58.215+05:30  INFO 19704 --- [account-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.35
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20T14:42:59.184+05:30  INFO 19704 --- [account-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20T14:42:59.290+05:30  INFO 19704 --- [account-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20T14:42:59.576+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-20T14:43:00.172+05:30  WARN 19704 --- [account-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20T14:43:00.666+05:30  WARN 19704 --- [account-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-20T14:43:00.892+05:30  INFO 19704 --- [account-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-01-20T14:43:00.944+05:30  WARN 19704 --- [account-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-01-20T14:43:00.992+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51371 (http) with context path '/'
+2026-01-20T14:43:00.994+05:30  INFO 19704 --- [account-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 51371
+2026-01-20T14:43:00.998+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-01-20T14:43:01.034+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-01-20T14:43:01.036+05:30  INFO 19704 --- [account-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-01-20T14:43:01.045+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-01-20T14:43:01.332+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-01-20T14:43:01.332+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-01-20T14:43:01.339+05:30  INFO 19704 --- [account-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-01-20T14:43:01.339+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1768900381339 with initial instances count: 2
+2026-01-20T14:43:01.339+05:30  INFO 19704 --- [account-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACCOUNT-SERVICE with eureka with status UP
+2026-01-20T14:43:01.339+05:30  INFO 19704 --- [account-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1768900381339, current=UP, previous=STARTING]
+2026-01-20T14:43:01.339+05:30  INFO 19704 --- [account-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/Mohasin:account-service:0: registering service...
+2026-01-20T14:43:01.402+05:30  INFO 19704 --- [account-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/Mohasin:account-service:0 - registration status: 204
+2026-01-20T14:43:01.461+05:30  INFO 19704 --- [account-service] [  restartedMain] c.a.AccountServiceApplication            : Started AccountServiceApplication in 27.528 seconds (process running for 29.085)

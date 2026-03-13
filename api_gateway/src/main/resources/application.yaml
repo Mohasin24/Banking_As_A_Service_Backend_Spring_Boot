@@ -1,0 +1,109 @@
+server:
+  port: 8080
+
+jwt:
+  secret: d3171c6bc56bda5b29e3c242946f0a92b6ac012023f0e9bbfd9cf87012795a167676a1e8faa7722c1beeb77a152be6620d4c424ee6d2789c1e00568b1ad859b7a2775c00a0d55093684cda1fcb5c51b8e05abe051bf51e1501ddec18c4b34165875b0d02d1e6acae0777beeb9950125ac5b8398e6286a607da3af77847834ca1ff55fe025f828eff5fd089a27ee7fc861b81d4048fdc52705212ed1e32443956a1946456458a8463f7014e6a06fe7dcad6326f5fc5a888d656fd120ba82c384bbd30cc32d7e3e8de8f6f11cc797bca25e9005a824d696c228e1adae221d5cc2fc157f249ea92d8c90700386ebe3de196908a1c435ae098cb4cf88aeaa3baea0a
+
+spring:
+  config:
+    import:
+      - optional:configserver:http://localhost:8888
+      - classpath:circuitbreaker-config.yaml
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/api/v1/account/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: accountServiceCB
+                fallbackUri: forward:/fallback/account
+        - id: audit-service
+          uri: lb://audit-service
+          predicates:
+            - Path=/api/v1/audit/**
+        - id: authentication-service
+          uri: lb://authentication-service
+          predicates:
+            - Path=/api/v1/authentication/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: authenticationServiceCB
+                fallbackUri: forward:/fallback/authentication
+        - id: loan-service
+          uri: lb://loan-service
+          predicates:
+            - Path=/api/v1/loan/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: loanServiceCB
+                fallbackUri: forward:/fallback/loan
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/api/v1/notification/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCB
+                fallbackUri: forward:/fallback/notification
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/v1/payment/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: paymentServiceCB
+                fallbackUri: forward:/fallback/payment
+        - id: reporting-service
+          uri: lb://reporting-service
+          predicates:
+            - Path=/api/v1/reporting/**
+        - id: transaction-service
+          uri: lb://transaction-service
+          predicates:
+            - Path=/api/v1/transaction/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: transactionServiceCB
+                fallbackUri: forward:/fallback/transaction
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/user/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},traceId=%X{traceId},spanId=%X{spanId}]"

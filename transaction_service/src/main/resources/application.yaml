@@ -1,0 +1,70 @@
+server:
+  port: 0
+
+services:
+  account-service-uri: http://localhost:8080/api/v1/account
+
+spring:
+  application:
+    name: transaction-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    url: jdbc:mysql://localhost:3306/BAAS_Transaction_Service?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  # kafka config
+  kafka:
+    bootstrap-server: localhost:9092
+    consumer:
+      group-id: transaction-kafkaService
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},traceId=%X{traceId},spanId=%X{spanId}]"
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      accountServiceCB: # Circuit breaker name
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED   # COUNT_BASED or TIME_BASED
+        slidingWindowSize: 10            # Number of calls to consider in the window
+        minimumNumberOfCalls: 5          # Minimum calls before calculating failure rate
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s     # Time before switching from OPEN to HALF_OPEN
+        failureRateThreshold: 50         # % of failures to trip the breaker

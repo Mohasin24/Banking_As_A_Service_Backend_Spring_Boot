@@ -1,0 +1,102 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.account_service:account_service:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.kafka:spring-kafka:jar -> duplicate declaration of version (?) @ line 76, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------< com.discovery_server:discovery_server >----------------
+[INFO] Building discovery_server 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.5:run (default-cli) > test-compile @ discovery_server >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ discovery_server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ discovery_server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery_server ---
+[INFO] skip non existing resourceDirectory U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\discovery_server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ discovery_server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.5:run (default-cli) < test-compile @ discovery_server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.5:run (default-cli) @ discovery_server ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-03-13T02:35:16.570+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.d.DiscoveryServerApplication           : Starting DiscoveryServerApplication using Java 17.0.10 with PID 10936 (U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\discovery_server\target\classes started by Mohasin in U:\Desktop\09_Projects\04_Java_Microservices\03_Banking_as_a_Service\codebase\Banking_As_A_Service\discovery_server)
+2026-03-13T02:35:16.576+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.d.DiscoveryServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-03-13T02:35:16.653+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-13T02:35:16.654+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-13T02:35:19.707+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=75d9ab51-2961-3010-95b9-91db6edbb2cf
+2026-03-13T02:35:20.991+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-03-13T02:35:21.024+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-13T02:35:21.025+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-13T02:35:21.243+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-13T02:35:21.245+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4588 ms
+2026-03-13T02:35:29.573+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-03-13T02:35:29.577+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-03-13T02:35:30.251+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-03-13T02:35:30.253+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-03-13T02:35:30.751+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-03-13T02:35:32.931+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-13T02:35:33.611+05:30  WARN [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-13T02:35:33.658+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-03-13T02:35:33.709+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-03-13T02:35:33.709+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-03-13T02:35:33.713+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1773349533711 with initial instances count: 0
+2026-03-13T02:35:33.811+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-03-13T02:35:33.815+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2026-03-13T02:35:33.937+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-03-13T02:35:33.939+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-03-13T02:35:33.939+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-03-13T02:35:33.939+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-03-13T02:35:34.129+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2026-03-13T02:35:34.164+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-03-13T02:35:34.165+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-03-13T02:35:34.212+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-03-13T02:35:34.357+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2026-03-13T02:35:34.394+05:30  INFO [,traceId=,spanId=] 10936 --- [      Thread-15] [                                                 ] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-03-13T02:35:34.395+05:30  INFO [,traceId=,spanId=] 10936 --- [      Thread-15] [                                                 ] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-03-13T02:35:34.396+05:30  INFO [,traceId=,spanId=] 10936 --- [      Thread-15] [                                                 ] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-03-13T02:35:34.396+05:30  INFO [,traceId=,spanId=] 10936 --- [      Thread-15] [                                                 ] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-03-13T02:35:34.396+05:30  INFO [,traceId=,spanId=] 10936 --- [      Thread-15] [                                                 ] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-03-13T02:35:34.400+05:30  INFO [,traceId=,spanId=] 10936 --- [      Thread-15] [                                                 ] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-03-13T02:35:34.415+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2026-03-13T02:35:34.417+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-03-13T02:35:34.897+05:30  INFO [,traceId=,spanId=] 10936 --- [  restartedMain] [                                                 ] c.d.DiscoveryServerApplication           : Started DiscoveryServerApplication in 19.804 seconds (process running for 20.901)
+2026-03-13T02:35:35.464+05:30  INFO [,traceId=,spanId=] 10936 --- [nio-8761-exec-3] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-13T02:35:35.466+05:30  INFO [,traceId=,spanId=] 10936 --- [nio-8761-exec-3] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-13T02:35:35.473+05:30  INFO [,traceId=,spanId=] 10936 --- [nio-8761-exec-3] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-03-13T02:35:36.413+05:30  INFO [,traceId=69b32a9feb611b23f2926323da67aaaf,spanId=f4b95bc44d1fb29c] 10936 --- [nio-8761-exec-4] [69b32a9feb611b23f2926323da67aaaf-f4b95bc44d1fb29c] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/Mohasin:config-server:8888 with status UP (replication=false)
+2026-03-13T02:35:37.503+05:30  INFO [,traceId=69b32aa12872b61e45b3a8415b7014ea,spanId=45b3a8415b7014ea] 10936 --- [nio-8761-exec-7] [69b32aa12872b61e45b3a8415b7014ea-45b3a8415b7014ea] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/Mohasin:config-server:8888 with status UP (replication=true)
+2026-03-13T02:35:57.686+05:30  INFO [,traceId=69b32ab50b7679dc02828f8cd78d2646,spanId=fa3a8cbe91fabcc9] 10936 --- [nio-8761-exec-1] [69b32ab50b7679dc02828f8cd78d2646-fa3a8cbe91fabcc9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHENTICATION-SERVICE/Mohasin:authentication-service:0 with status UP (replication=false)
+2026-03-13T02:35:58.218+05:30  INFO [,traceId=69b32ab66c3cef8882b40036a9bcc520,spanId=82b40036a9bcc520] 10936 --- [nio-8761-exec-2] [69b32ab66c3cef8882b40036a9bcc520-82b40036a9bcc520] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHENTICATION-SERVICE/Mohasin:authentication-service:0 with status UP (replication=true)
+2026-03-13T02:36:03.829+05:30  INFO [,traceId=69b32abb3a8ce282b06f6afeb07790f9,spanId=b06f6afeb07790f9] 10936 --- [nio-8761-exec-6] [69b32abb3a8ce282b06f6afeb07790f9-b06f6afeb07790f9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/Mohasin:api-gateway:8080 with status UP (replication=false)
+2026-03-13T02:36:04.353+05:30  INFO [,traceId=69b32abc4d558ccf4e2f40c92f64b1d6,spanId=4e2f40c92f64b1d6] 10936 --- [nio-8761-exec-9] [69b32abc4d558ccf4e2f40c92f64b1d6-4e2f40c92f64b1d6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/Mohasin:api-gateway:8080 with status UP (replication=true)
+2026-03-13T02:36:34.397+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-13T02:37:34.404+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-03-13T02:38:34.406+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-03-13T02:39:34.407+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-03-13T02:40:34.415+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-03-13T02:41:34.429+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-03-13T02:42:34.443+05:30  INFO [,traceId=,spanId=] 10936 --- [a-EvictionTimer] [                                                 ] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms

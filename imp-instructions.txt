@@ -1,0 +1,16 @@
+Running all the services at once:
+bash run-all.sh   //run-all.sh file must be present with necessary config
+
+Kill all the services and release ports the at once:
+
+
+another way:
+cat service_pids.txt | xargs kill  //service_pids.txt file must be present
+
+kill Java processes manually:
+ps aux | grep 'spring-boot:run'
+
+Find all running Java processes, note their PIDs, and kill them:
+kill -9 <pid1> <pid2> <pid3> ...
+
+
